@@ -30,7 +30,7 @@ func main() {
 func exec() error {
 
 	var (
-		url      = "tcp://localhost:11883"
+		url      = "tcp://localhost:1883"
 		topic    = "topic"
 		qos      = byte(0)
 		duration = 20 * time.Second

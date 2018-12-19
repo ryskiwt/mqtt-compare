@@ -22,16 +22,9 @@ services:
     volumes:
       - ./grafana:/var/lib/grafana
 
-  emqtt:
-    build: "./docker/emqtt"
-    ports:
-      - 11883:1883
-    volumes:
-      - ./docker/emqtt/emq.conf:/tmp/emqttd/etc/emq.conf
-
   mosquitto:
     build: "./docker/mosquitto"
     ports:
-      - 21883:1883
+      - 1883:1883
     volumes:
       - ./docker/mosquitto/mosquitto.conf:/etc/mosquitto/conf.d/mosquitto.conf
